@@ -13,7 +13,7 @@
         <!--My To-Do List-->
         <scene sceneID="lSc-Gl-OU2">
             <objects>
-                <tableViewController id="aoN-Xy-keZ" sceneMemberID="viewController">
+                <tableViewController id="aoN-Xy-keZ" customClass="ToDoList" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MbG-GZ-5r5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,7 +287,7 @@
                     <navigationItem key="navigationItem" title="My To-Do List" id="BVV-EI-6gL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nB4-rv-Xjs">
                             <connections>
-                                <segue destination="Q4T-to-hYN" kind="modal" id="gXr-ej-aeC"/>
+                                <segue destination="Q4T-to-hYN" kind="presentation" id="gXr-ej-aeC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -299,7 +299,7 @@
         <!--Add To-Do Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddToDoItem" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -323,11 +323,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add To-Do Item" id="u3T-Gg-71D">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PMI-8q-lKP"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="NEL-pa-IyW"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PMI-8q-lKP">
+                            <connections>
+                                <segue destination="78C-ME-qr9" kind="unwind" unwindAction="unwindToList:" id="fN0-Ej-gyC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="NEL-pa-IyW">
+                            <connections>
+                                <segue destination="78C-ME-qr9" kind="unwind" unwindAction="unwindToList:" id="9IG-sw-d8A"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="78C-ME-qr9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1996" y="122.78860569715144"/>
         </scene>
