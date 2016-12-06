@@ -14,6 +14,7 @@
 		B3AAD3901DF50A3500A6B2AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AAD38E1DF50A3500A6B2AE /* LaunchScreen.storyboard */; };
 		B3AAD3991DF523F000A6B2AE /* AddToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AAD3981DF523F000A6B2AE /* AddToDoItem.m */; };
 		B3AAD39C1DF5249100A6B2AE /* ToDoList.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AAD39B1DF5249100A6B2AE /* ToDoList.m */; };
+		B3AAD39F1DF6739A00A6B2AE /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AAD39E1DF6739A00A6B2AE /* ToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		B3AAD3981DF523F000A6B2AE /* AddToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToDoItem.m; sourceTree = "<group>"; };
 		B3AAD39A1DF5249100A6B2AE /* ToDoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoList.h; sourceTree = "<group>"; };
 		B3AAD39B1DF5249100A6B2AE /* ToDoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoList.m; sourceTree = "<group>"; };
+		B3AAD39D1DF6739A00A6B2AE /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		B3AAD39E1DF6739A00A6B2AE /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				B3AAD3831DF50A3500A6B2AE /* AppDelegate.h */,
 				B3AAD3841DF50A3500A6B2AE /* AppDelegate.m */,
 				B3AAD3891DF50A3500A6B2AE /* Main.storyboard */,
+				B3AAD39D1DF6739A00A6B2AE /* ToDoItem.h */,
+				B3AAD39E1DF6739A00A6B2AE /* ToDoItem.m */,
 				B3AAD38C1DF50A3500A6B2AE /* Assets.xcassets */,
 				B3AAD38E1DF50A3500A6B2AE /* LaunchScreen.storyboard */,
 				B3AAD3911DF50A3500A6B2AE /* Info.plist */,
@@ -156,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3AAD3851DF50A3500A6B2AE /* AppDelegate.m in Sources */,
+				B3AAD39F1DF6739A00A6B2AE /* ToDoItem.m in Sources */,
 				B3AAD3991DF523F000A6B2AE /* AddToDoItem.m in Sources */,
 				B3AAD3821DF50A3500A6B2AE /* main.m in Sources */,
 				B3AAD39C1DF5249100A6B2AE /* ToDoList.m in Sources */,
