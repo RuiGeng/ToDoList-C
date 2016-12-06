@@ -8,6 +8,7 @@
 
 #import "ToDoList.h"
 #import "ToDoItem.h"
+#import "AddToDoItem.h"
 
 @interface ToDoList ()
 
@@ -38,14 +39,17 @@
     
     ToDoItem *item1 = [[ToDoItem alloc] init];
     item1.itemName = @"Buy milk";
+    item1.creationDate = [NSDate date];
     [self.toDoItems addObject:item1];
     
     ToDoItem *item2 = [[ToDoItem alloc] init];
     item2.itemName = @"Buy eggs";
+    item2.creationDate = [NSDate date];
     [self.toDoItems addObject:item2];
     
     ToDoItem *item3 = [[ToDoItem alloc] init];
     item3.itemName = @"Read a book";
+    item3.creationDate = [NSDate date];
     [self.toDoItems addObject:item3];
     
 }
@@ -53,6 +57,18 @@
 #pragma mark - Table view data source
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    
+    AddToDoItem *source = [segue sourceViewController];
+    
+    ToDoItem *item = source.toDoItem;
+    
+    if (item != nil) {
+        
+        [self.toDoItems addObject:item];
+        
+        [self.tableView reloadData];
+        
+    }
     
 }
 
@@ -87,6 +103,10 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
         
     }
+    
+    cell.detailTextLabel.text = [NSDateFormatter localizedStringFromDate:toDoItem.creationDate
+                                                          dateStyle:NSDateFormatterShortStyle
+                                                          timeStyle:NSDateFormatterShortStyle];
     
     return cell;
 }
